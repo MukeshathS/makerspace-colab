@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3ex%y#wib@9p&*q*g$u&&1qy6u2%^&&j%@70!q$w-9qj9fosc^'
+SECRET_KEY = <'the_secret_key'>
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -82,16 +82,14 @@ DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
             #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-            'NAME': 'ddjcielcpnn28b',
-            'USER': 'szdfhkccuuzcud',
-            'PASSWORD': '7084994a304abf9c75f73ae34023195bba83b4ff53e9d4abd8ce3c333d33a884',
-            'HOST': 'ec2-54-197-254-117.compute-1.amazonaws.com',
+            'NAME': '<your heroku db name>',
+            'USER': '<your heroku db username>',
+            'PASSWORD': '<your heroku db password>',
+            'HOST': '<your heroku db host>',
             'PORT': '5432',
         }
 }
 
-# db_from_env = dj_database_url.config(conn_max_age=600)
-# DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -160,8 +158,8 @@ LOGIN_EXEMPT_URLS = {
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_USE_TLS = True
 # EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'makerspace.colab@gmail.com'
-# EMAIL_HOST_PASSWORD = 'MakerspaceColab@93'
+# EMAIL_HOST_USER = '<your gmail email id>'
+# EMAIL_HOST_PASSWORD = '<your gmail password>'
 
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
