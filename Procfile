@@ -1,1 +1,1 @@
-web: gunicorn ResumeColab.wsgi --log-file=-
+web: gunicorn ResumeColab.wsgi --log-file -
