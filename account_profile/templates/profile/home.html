@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+
+{% block nav %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a class="navbar-brand" href="{% url 'users:home' %}">Break Stack</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link my-2 my-sm-0" href="{% url 'users:home' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav pull-right">
+      <a class="navbar-brand" href="#">Hi {{ user }},</a>
+      <a href="{% url 'users:logout' %}">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+      </a>
+    </ul>
+  </div>
+</nav>
+{% endblock %}

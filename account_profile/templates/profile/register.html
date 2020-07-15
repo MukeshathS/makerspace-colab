@@ -1,0 +1,61 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Register</title>
+<style media="screen">
+  .container{
+    /* background-color: lightblue; */
+    padding: 5%;
+  }
+</style>
+{% load static %}
+<link rel="stylesheet" href="{% static 'profile/style.css' %}" type="text/css">
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <h3>Welcome</h3>
+                        <p>You are 30 seconds away!</p>
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3  class="register-heading">CREATE ACCOUNT</h3>
+                            <form class="form-signin" method="POST">
+                            <div class="row register-form">
+                                {% csrf_token %}
+                                {% for field in form %}
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        {{ field }}
+                                    </div>
+                                    </div>
+                                      <div class="col-md-5">
+                                      <div class="form-group">
+                                        {% if field.name in form.errors %}
+                                        {% if field.name == "password2" %}
+                                          <p style="color: red;">{{ field.help_text }}</p>
+                                          <p style="color: red;">Please enter valid and matching passwords.<br>Include symbols to make your password secure.</p>
+                                          <p style="color: red;">{{ form.password1.help_text }}</p>
+                                        {% else %}
+                                          <p style="color: red;">{{ field.help_text }}</p>
+                                          <p style="color: red;">Please provide a valid {{field.name}}.</p>
+                                        {% endif %}
+                                        {% endif %}
+                                      </div>
+                                      </div>
+                                    {% endfor %}
+              <button class="btn btn-sm btn-primary btnRegister" type="submit">Submit</button>
+              </div>
+                                  </form>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+{% endblock %}

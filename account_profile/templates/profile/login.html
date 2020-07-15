@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Login</title>
+<style media="screen">
+  #signin_up{
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  .container-fluid{
+    background-color: lightblue;
+    padding: 16%;
+  }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid text-center">
+<form class="form-signin" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="btn btn-sm btn-primary" type="submit" id="signin_up">Sign In</button>
+</form>
+<br><br>
+  <a  href="{% url 'users:register' %}">
+  <button class="btn btn-md btn-secondary" type="submit">Sign Up</button>
+  </a>
+
+  <a  href="{% url 'users:password_reset' %}">
+  <button class="btn btn-md btn-secondary" type="submit">Forgot Password</button>
+  </a>
+</div>
+{% endblock %}

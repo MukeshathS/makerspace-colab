@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Login</title>
+<style media="screen">
+  #signin_up{
+    padding-left: 2%;
+    padding-right:2%;
+  }
+  .container-fluid{
+    background-color: lightblue;
+    padding: 16%;
+  }
+</style>
+{% endblock %}
+
+
+
+{% block body %}
+<!-- <div class="jumbotron"> -->
+<div class="container-fluid text-center">
+<h3>Logout Successful!</h3><br>
+<h3>Click on the button below to login again</h3><br>
+<a href="{% url 'users:login' %}">
+<button class="btn btn-success my-2 my-lg-0" type="submit">Login / Register</button>
+</a>
+</div>
+<!-- </div> -->
+{% endblock %}
