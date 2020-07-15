@@ -82,10 +82,10 @@ DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
             #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-            'NAME': 'ddjcielcpnn28b',
-            'USER': 'szdfhkccuuzcud',
-            'PASSWORD': '7084994a304abf9c75f73ae34023195bba83b4ff53e9d4abd8ce3c333d33a884',
-            'HOST': 'ec2-54-197-254-117.compute-1.amazonaws.com',
+            'NAME': 'resumecolabdb',
+            'USER': 'postgres',
+            'PASSWORD': 'Highlander',
+            'HOST': 'localhost',
             'PORT': '5432',
         }
 }
@@ -93,7 +93,6 @@ DATABASES = {
 # db_from_env = dj_database_url.config(conn_max_age=600)
 # DATABASES['default'].update(db_from_env)
 
-# DATABASE_URL='postgres://szdfhkccuuzcud:7084994a304abf9c75f73ae34023195bba83b4ff53e9d4abd8ce3c333d33a884@ec2-54-197-254-117.compute-1.amazonaws.com:5432/ddjcielcpnn28b'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
