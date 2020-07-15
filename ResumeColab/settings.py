@@ -82,10 +82,10 @@ DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
             #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-            'NAME': 'resumecolabdb',
-            'USER': 'postgres',
-            'PASSWORD': 'Highlander',
-            'HOST': 'localhost',
+            'NAME': 'ddjcielcpnn28b',
+            'USER': 'szdfhkccuuzcud',
+            'PASSWORD': '7084994a304abf9c75f73ae34023195bba83b4ff53e9d4abd8ce3c333d33a884',
+            'HOST': 'ec2-54-197-254-117.compute-1.amazonaws.com',
             'PORT': '5432',
         }
 }
